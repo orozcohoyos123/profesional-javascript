@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Scope</title>
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+  <body>
+    <a href="/ejercicios/">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+
+    <script>
+      // Global Scope
+      // var message = 'Hello, Platzi!';
+      // var $ = function(message) {
+      //   console.log('Say: ' + message);
+      // };
+
+      // Function Scope
+      // function printNumbers() {
+      //   var i;
+      //   for (i = 0; i < 10; i++) {
+      //     function eventuallyPrintNumber(n) { // forma sin declarar i como LET
+      //       setTimeout(function() {
+      //         console.log(n);
+      //       }, 100);
+      //     }
+
+      //     eventuallyPrintNumber(i);
+      //   }
+      // }
+
+      // printNumbers();
+
+      // Block Scope
+      function printNumbers2() {
+        for (let i = 0; i < 10; i++) {
+          setTimeout(function() {
+            console.log(i);
+          }, 100);
+        }
+      }
+
+      printNumbers2();
+
+      // Module Scope
+    </script>
+  <script type="text/javascript">(function(){window['__CF$cv$params']={r:'62229d1548a2b58e',m:'133825b9a07bfb7ae2dda91b336e8b844a91e46c-1613429696-1800-AXrhJY8e1PL+vbpUhwfUiNhzksQxHVPjD0CrrnUDSBzSo4RymbYdSQ/4BtN/qWUFQP5rB8tq6/ne2Did+BS6NE1T5KGYRgE9msxR3ZZJbXi/YNwrzNUTcHQutqmq2jJ70m4T+c2BcNYzCI1DZauZfbRso5eLdp+AJzXaljY+QigxHgo2ilvR5F6GB9lsarbvCB/HqSdzRXEI2XCld4RDn14=',s:[0x6afc7a1627,0xabfd2c23c3],}})();</script></body>
+</html>
