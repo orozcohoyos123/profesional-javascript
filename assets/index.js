@@ -8,7 +8,7 @@ const button_mute = document.getElementById("btnMute");
 const player = new MediaPlayer({ 
     el: video, 
     plugins: [
-        //new AutoPlay()
+        new AutoPlay()
     ]
 });
 button_play.onclick = () => player.togglePlay();
