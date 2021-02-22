@@ -2,6 +2,7 @@ class AutoPause{
     constructor(){
         this.threshold = 0.25
         this.handlerIntersection = this.handlerIntersection.bind(this)
+        this.handleVisibilityChange = this.handleVisibilityChange.bind(this)
     }
 
     run(player){
@@ -11,6 +12,8 @@ class AutoPause{
         })
 
         observer.observe(this.player.media)
+
+        document.addEventListener('visibilitychange', this.handleVisibilityChange)
     }
 
     handlerIntersection(entries){
@@ -20,9 +23,11 @@ class AutoPause{
         const isVisible = entry.intersectionRatio >= this.threshold
 
         isVisible ? this.player.play(): this.player.pause()
+    }
 
-        this.player.play()
-        this.player.pause()
+    handleVisibilityChange(){
+        const isVisible = document.visibilityState === 'visible'
+        isVisible ? this.player.play() : this.player.pause()
     }
 }
 
