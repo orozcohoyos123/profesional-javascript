@@ -16,8 +16,9 @@ const player = new MediaPlayer({
 button_play.onclick = () => player.togglePlay();
 button_mute.onclick = () => player.toggleMute();
 
- if('serviceWorker' in navigator){ //es un tipo de cache offline
+
+/*  if('serviceWorker' in navigator){ //es un tipo de cache offline
     navigator.serviceWorker.register('../sw.js')
         .catch(err => console.log(err.message))
-} 
+}  */
  // no sirve con parcel, no se por que
